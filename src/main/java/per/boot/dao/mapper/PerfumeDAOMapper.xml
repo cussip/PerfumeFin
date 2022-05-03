@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="per.boot.dao.PerfumeDAO">
+
+ <select id="selectPerfumeList" resultType="per.boot.vo.PerfumeVO">
+	<![CDATA[
+		select * from PRODUCT WHERE BRAND is NOT NULL
+	]]>
+ </select>
+ 
+ <select id="selectGoodsList" resultType="per.boot.vo.PerfumeVO">
+	<![CDATA[
+		select * from PRODUCT WHERE BRAND is NULL
+	]]>
+ </select>
+ 
+</mapper>
