@@ -71,14 +71,15 @@
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+		        <h5 class="modal-title" id="staticBackdropLabel">title</h5>
 		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		      </div>
+			  
+			  <form action="bwsubmit" method="post">
 		      <div class="modal-body">
 		
 				  <!-- 게시글 작성 부분 -->	
 				  <div class="col-md-auto">
-					  <form action="bwsubmit" method="post">
 						
 						<div class="input-group mb-3">
 						  <span class="input-group-text">제목</span>
@@ -90,14 +91,15 @@
 						  <textarea class="form-control" name="content" style="height: 700px"></textarea>
 						</div>
 						
-					  </form>
 				  </div>
 		
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-		        <button type="button" class="btn btn-primary">저장</button>
+		        <button type="submit" class="btn btn-primary">저장</button>
+		        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
 		      </div>
+			  </form>
+			  
 		    </div>
 		  </div>
 		</div>

@@ -13,5 +13,6 @@ public interface AdminDAO {
 	List<BoardVO> getNoticeList() throws Exception;
 	List<BoardVO> getFAQList() throws Exception;
 	List<EventVO> getEventList() throws Exception;
+	String bwsubmit(BoardVO board) throws Exception;
 	
 }

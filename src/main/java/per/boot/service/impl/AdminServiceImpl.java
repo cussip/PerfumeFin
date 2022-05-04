@@ -37,4 +37,11 @@ public class AdminServiceImpl implements AdminService {
 		return eventList;
 	}
 
+	@Override
+	public String bwsubmit(BoardVO board) throws Exception {
+		
+		return adminDao.bwsubmit(board);
+		
+	}
+
 }

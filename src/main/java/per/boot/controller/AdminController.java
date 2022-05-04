@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import per.boot.service.AdminService;
@@ -48,13 +49,13 @@ public class AdminController {
 		return "admin.event";
 	}
 	
-//	@RequestMapping("bwsubmit")
-//	public String bwsubmit(@ModelAttribute BoardVO board) throws SQLException {
-//		
-//		adminService.bwsubmit(board);
-//		
-//		return "root.customer.notice";
-//	}	
+	@RequestMapping("bwsubmit")
+		public String bwsubmit(@ModelAttribute BoardVO board) throws Exception {
+		
+		adminService.bwsubmit(board);
+		
+		return "redirect:board";
+	}	
 	
 }
 

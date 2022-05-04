@@ -5,21 +5,27 @@
 
 	<select id="getNoticeList" resultType="per.boot.vo.BoardVO">
 		<![CDATA[
-			SELECT * FROM board WHERE category = 'notice'
+			SELECT * FROM board WHERE category = 'notice' ORDER BY notice_id DESC
 		]]>
 	</select>
  
 	<select id="getFAQList" resultType="per.boot.vo.BoardVO">
 		<![CDATA[
-			SELECT * FROM board WHERE category = 'notice'
+			SELECT * FROM board WHERE category = 'faq' ORDER BY notice_id DESC
 		]]>
 	</select>
 	
 	<select id="getEventList" resultType="per.boot.vo.EventVO">
 		<![CDATA[
-			SELECT * FROM event ORDER BY event_id DESC
+			SELECT * FROM event ORDER BY event_id DESC 
 		]]>
 	</select>
+	
+	<insert id="bwsubmit" parameterType="per.boot.vo.BoardVO">
+		<![CDATA[
+			INSERT INTO board VALUES (board_seq.nextval, 0, #{title}, #{content}, sysdate, 'notice')
+		]]>
+	</insert>
 
  
 </mapper> 
